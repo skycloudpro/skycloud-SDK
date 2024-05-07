@@ -1,4 +1,4 @@
-OFFICIAL PHP SDK FOR SKYCLOUD (sCloud) scloud.live
+<h1>OFFICIAL PHP SDK FOR SKYCLOUD (sCloud) scloud.live</h1>
 
 A simple Lightweight SDK-LIBRARY For The Skycloud API -  by skycloud
 https://developers.scloud.live
@@ -12,7 +12,7 @@ this sCloud SDK uses no external PHP libraries.
 
 refer to https://developers.scloud.live/Developer/Documentation/ for more information.
 
-<b>The usage is very simply, example</b>
+<h2>The usage is very simply, example</h2>
 
 $sCloud->generateAuthUrl(1);
 

@@ -12,7 +12,7 @@ this sCloud SDK uses no external PHP libraries.
 
 refer to https://developers.scloud.live/Developer/Documentation/ for more information.
 
-The usage is very simply, example
+<b>The usage is very simply, example</b>
 
 $sCloud->generateAuthUrl(1);
 

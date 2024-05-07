@@ -1,4 +1,4 @@
-include'sCloud-SDK.php';
+include'sCloud_SDK.php';
 
  $sCloud = new sCloud( $dummy, 15,2,0 );
 

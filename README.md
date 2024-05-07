@@ -8,3 +8,8 @@ sCloud SDK uses Oauth 2.0 for authorization and to generate access tokens then c
 this sCloud SDK uses no external libraries.
 
 refer to https://developers.scloud.live/Developer/Documentation/ for more information.
+
+The usage is very simply, example
+$sCloud->generateAuthUrl(1);
+$sCloud->API('token');
+$sCloud->API(METHOD,PARAMS); - OPTIONAL PARAMATERS

@@ -1,9 +1,9 @@
 <?php
 ////////////////////////////SKYCLOUD API CONNECT CONFIG/////////////////////
 
-// Fill these out with the values from Skycloud
-$SkycloudClientID = '202e59a49f603a3a.apps.scloud.live';//PUT YOUR app id HERE client id is the same AS APP ID
-$SkycloudClientSecret = '36ade90ff3717bd75af738208a29b439eb0bc397e0be4bfd5b5e68b78c9236d9';//PUT YOUR APP SECRET HERE
+// Fill these out with the values from Skycloud developers dashboard.
+$SkycloudClientID = 'YOUR-APP-ID';//PUT YOUR app id HERE client id is the same AS APP ID
+$SkycloudClientSecret = 'YOU-APP-SECREY-KEY';//PUT YOUR APP SECRET HERE
  
 // This is the URL we'll send the user to first
 // to get their authorization &bauth code

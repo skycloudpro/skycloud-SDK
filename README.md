@@ -1,7 +1,7 @@
 OFFICIAL SDK FOR SKYCLOUD (sCloud) scloud.live
 
 A simple Lightweight SDK-LIBRARY For The Skycloud API -  by skycloud
-https://developers.skycloud.pro
+https://developers.scloud.live
 
 
 You will need to create an application name in the scloud Developers dashboard

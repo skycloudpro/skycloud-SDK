@@ -1,4 +1,5 @@
-A simple Lightweight SDK-LIBRARY For The Skycloud API - Written by Frankie Miller
+OFFICIAL SDK FOR SKYCLOUD (sCloud) scloud.live
+A simple Lightweight SDK-LIBRARY For The Skycloud API -  by skycloud
 https://developers.skycloud.pro
 
 

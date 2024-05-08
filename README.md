@@ -33,5 +33,10 @@ With optional (parameters array)
 $sCloud->API('METHOD',$params); - OPTIONAL PARAMETERS ARRAY
 </code></pre>
 
+<br />
+<p>Helper Method</p>
+
+<pre><code>$sCloud->AuthToken();//get authentication token info, expiry, creation date</code></pre>
+
 
 

@@ -19,9 +19,9 @@ refer to https://developers.scloud.live/Developer/Documentation/ for more inform
 
 <code>$sCloud->generateAuthUrl(1);</code>
 
-$sCloud->API('token');
+<code>$sCloud->API('token');</code>
 
-$sCloud->API('METHOD');
+<pre><code>$sCloud->API('METHOD');</code></pre>
 
 
 <br/><br />

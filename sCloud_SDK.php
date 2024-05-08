@@ -128,9 +128,14 @@ if($url=='token'){
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
   $response = curl_exec($ch);
+
+	/////here we save the token in side our class so we dont have to outside :)
   if($url=='token'){
-	  $_SESSION['access_token'] =$token['access_token'];//store the access token in a session
+	  $gettoken=json_decode($response, true);
+	  $_SESSION['access_token'] =$gettoken['access_token'];//store the access token in a session
   }
+///
+	
   return json_decode($response, true);
 }
 ////////////////////////////////////////

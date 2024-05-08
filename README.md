@@ -27,7 +27,7 @@ refer to https://developers.scloud.live/Developer/Documentation/ for more inform
 <br/><br />
 With optional (parameters array)
 
-<pre>code>$params=array('example_value1','example_value2');//example values
+<pre><code>$params=array('example_value1','example_value2');//example values
 
 $sCloud->API('METHOD',$params); - OPTIONAL PARAMETERS ARRAY
 </code></pre>

@@ -21,7 +21,8 @@ $sCloud->generateAuthUrl(1);
 
 $sCloud->API('token');
 
-$sCloud->API(METHOD,PARAMS); - OPTIONAL PARAMATERS
+$params=array('email','username','password','first_name','last_name');//new_account_values
+$sCloud->API('METHOD',$params); - OPTIONAL PARAMATERS ARRAY
 
 
 

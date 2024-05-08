@@ -21,3 +21,6 @@ $sCloud->API('token');
 
 $sCloud->API(METHOD,PARAMS); - OPTIONAL PARAMATERS
 
+
+Pull requests are welcome.
+

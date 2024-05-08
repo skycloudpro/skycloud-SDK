@@ -1,11 +1,11 @@
 <h1>OFFICIAL PHP SDK FOR SKYCLOUD (sCloud) scloud.live</h1>
 
 A simple Lightweight and Powerful SDK-LIBRARY For The Skycloud API -  by skycloud https://scloud.live
-https://developers.scloud.live
+
 
 
 You will need to create an application name in the scloud Developers dashboard
-at (developers.scloud.live) to use the sCloud SDK and API's
+at (https://developers.scloud.live) to use the sCloud SDK and API's
 
 sCloud SDK uses Oauth 2.0 for authorization and to generate access tokens then can be used for API calls.
 

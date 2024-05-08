@@ -27,7 +27,7 @@ $sCloud->API('METHOD');
 <br/><br />
 With optional (parameters array)
 
-$params=array('example_value1','example_value2');//new_account_values
+$params=array('example_value1','example_value2');//example values
 
 $sCloud->API('METHOD',$params); - OPTIONAL PARAMATERS ARRAY
 

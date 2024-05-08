@@ -17,9 +17,9 @@ refer to https://developers.scloud.live/Developer/Documentation/ for more inform
 
 <h2>The usage is very simply, example</h2>
 
-<code>$sCloud->generateAuthUrl(1);</code>
+<pre><code>$sCloud->generateAuthUrl(1);</code></pre>
 
-<code>$sCloud->API('token');</code>
+<pre><code>$sCloud->API('token');</code></pre>
 
 <pre><code>$sCloud->API('METHOD');</code></pre>
 
@@ -27,9 +27,10 @@ refer to https://developers.scloud.live/Developer/Documentation/ for more inform
 <br/><br />
 With optional (parameters array)
 
-$params=array('example_value1','example_value2');//example values
+<pre>code>$params=array('example_value1','example_value2');//example values
 
 $sCloud->API('METHOD',$params); - OPTIONAL PARAMETERS ARRAY
+</code></pre>
 
 
 

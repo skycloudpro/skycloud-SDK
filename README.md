@@ -19,7 +19,7 @@ Pull requests are welcome.
 <h2>The usage is very simple </h2>
 <p>Methods</p>
 
-<pre><code>$sCloud->generateAuthUrl(1);</code></pre>
+<pre><code>$sCloud->generateAuthUrl(1);//1=hyperlink 0=URL String.</code></pre>
 
 <pre><code>$sCloud->API('token');</code></pre>
 

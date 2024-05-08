@@ -15,7 +15,8 @@ Pull requests are welcome.
 
 refer to https://developers.scloud.live/Developer/Documentation/ for more information.
 
-<h2>The usage is very simply, example</h2>
+<h2>The usage is very simple </h2>
+<p>Methods</p>
 
 <pre><code>$sCloud->generateAuthUrl(1);</code></pre>
 

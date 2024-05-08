@@ -3,7 +3,7 @@ $sCloud = new sCloud( $dummy, 15,2,0 );
 
 $sCloud->generateAuthUrl(1);
 $token=$sCloud->API('token');//json format
- $_SESSION['access_token'] =$token['access_token'];
+ 
 //Example API calls... (refer to the full API call list on sclouds developer website)
 // https://developers.scloud.live/Developer/Documentation/#APIs
 

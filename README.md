@@ -39,7 +39,7 @@ $sCloud->API('METHOD',$params); - OPTIONAL PARAMETERS ARRAY
 
 <pre><code>$sCloud->AuthToken();//get authentication token info, expiry, creation date</code></pre>
 
-Full Documentation can be found here [ https://](https://developers.scloud.live/Developer/Documentation/)
+Full Documentation can be found here [[ https://developers.scloud](https://developers.scloud.live/Developer/Documentation/)](https://developers.scloud.live/Developer/Documentation)
 
 
 

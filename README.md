@@ -24,7 +24,9 @@ $sCloud->API('token');
 $sCloud->API('METHOD');
 
 or with optional (parameters array)
+
 $params=array('email','username','password','first_name','last_name');//new_account_values
+
 $sCloud->API('METHOD',$params); - OPTIONAL PARAMATERS ARRAY
 
 

@@ -31,7 +31,7 @@ With optional (parameters array)
 
 <pre><code>$params=array('example_value1','example_value2');//example values
 
-$sCloud->API('METHOD',$params); - OPTIONAL PARAMETERS ARRAY
+$sCloud->API('METHOD',$params); //- OPTIONAL PARAMETERS ARRAY
 </code></pre>
 
 <br />

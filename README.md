@@ -22,6 +22,7 @@ Pull requests are welcome.
  <pre><code>$sCloud = new sCloud( 'app_key_here', 15,2,0 );</code></pre>
 
 
+<br />
 <p>Methods</p>
 
 <pre><code>$sCloud->generateAuthUrl(1);//1=hyperlink, 0=URL String.</code></pre>

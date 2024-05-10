@@ -17,6 +17,10 @@ Refer to https://developers.scloud.live/Developer/Documentation/ for more inform
 Pull requests are welcome.
 
 <h2>The usage is very simple </h2>
+
+<p>First declare the class</p>
+ <pre><code>$sCloud = new sCloud( 'app_key_here', 15,2,0 );</code></pre>
+
 <p>Methods</p>
 
 <pre><code>$sCloud->generateAuthUrl(1);//1=hyperlink, 0=URL String.</code></pre>

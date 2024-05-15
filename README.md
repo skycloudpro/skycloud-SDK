@@ -33,7 +33,7 @@ Pull requests are welcome.
 
 
 <br/><br />
-With optional (parameters array)
+With optional (POST parameters array)
 
 <pre><code>$params=array('example_value1','example_value2');//example values
 

@@ -10,7 +10,9 @@ class sCloud {
  private $api_key;
  private $age;
  private $request;//used to hold the request from our application call.
- private  $app_secret;//app secret that you got from developer.scloud.live when you created an applicaiton on scloud develpers website.
+ private $app_secret;//app secret that you got from developer.scloud.live when you created an applicaiton on scloud develpers website.
+ 
+ //define some of scloud's error codes later.
  
  
 function __construct( $api_key,$app_secret, $age,$request ) {
@@ -20,6 +22,7 @@ function __construct( $api_key,$app_secret, $age,$request ) {
 		$this->request = $request;
 		
 	}
+	
 	public function getconfig(){
 	include'Config.php';
 	//other functions will use these config settings via $this->getconfig();
@@ -31,13 +34,6 @@ $obj = json_decode($jsonobj);
   }
 	
 	
-	
-	
-	
- //USED TO MAKE API REQUEST TO SKYCLOUD
-
-
-
 /////generate a authorzation URL to the sCloud authorization server.
 function generateAuthUrl($whatlink){
 	 $SkycloudClientID=$this->getconfig()->SkycloudClientID;
@@ -81,8 +77,11 @@ function AuthToken(){
 	  }
 	return $token;
 }
+
+//USED TO MAKE API REQUEST TO SKYCLOUD
 //ACTUAL API CALL FUNCTION.
-function API($url, $post=FALSE, $headers=array()) {
+function API($url, $post=FALSE, $options=FALSE, $headers=array()) {
+	//echo 'API-CALL::'.$url;//DEBUG
 //connect config varables so we can use them in this function.
 	$SkycloudClientID=$this->getconfig()->SkycloudClientID;
 	$baseURL=$this->getconfig()->baseURL;
@@ -90,8 +89,76 @@ function API($url, $post=FALSE, $headers=array()) {
 	$SkycloudClientSecret=$this->getconfig()->SkycloudClientSecret;
 	$api_url=$this->getconfig()->Api_url;
     $token_url=$this->getconfig()->token_url;
-	      
-	  //post values.    
+	 //END OF CONFIG VARABLES. 
+	     
+	//post values. 
+     if($post){
+	  	//user custom post might need to combine with below post aswell
+	  	//get POST VALUE
+	  	//BUILD FROM USER ARRAY 
+	  	//HERE WE ARE CHECKING FOR SCLOUD API METHODS BUT ONLY ONES WITH A POST PARAM WILL ACTUALLY REACH THIS SECTION OF CODE.
+	  	//cloud_upload method
+	  	 if($url=='cloud_upload'){
+	     if($options!=FALSE){
+	 	
+	 	
+	 	//lets check if the mentioned encryption type is a valid scloud encryption type.
+	 	if($options=="AES-256"){
+			
+			
+		}
+		else{
+				echo 'Error unrecognised encryption type, please try using AES-256';
+			exit();
+		}
+	 	
+	 	
+	 	if(count($post)==1){
+	 		
+			//single file found
+			$post=array(
+    'filename' => $post[0],//single file
+    'encryption_type' => $option
+  );
+					}
+					elseif(count($post)>1){
+						//multiple files found to lets uploas em all.
+						//LOOP THROUGH ALL POST THE $POST VAR
+							$post=array(
+    'filename' => $post[0],//single file
+    'encryption_type' => $option
+  );
+					}
+	 	
+	 }
+	  else{
+	  	$error=1;//no encrytion type found
+	  	echo 'Error no encryption type found, please try using AES-256';
+	  	exit();
+	  }
+	  
+		}
+	  	
+	  	
+	  	//account_create method
+	  	if($url=='account_create'){
+	  		$post=array(
+    'email' => $post[0],
+    'username' => $post[1],
+    'password' => $post[2],
+    'fname' => $post[3],
+    'lname' => $post[4],
+    'ref_id' => $post[5],
+    'iso_lang' => $post[6]
+  );
+  
+ // print_r($post);
+			}
+	  }
+	  else{
+	  //THIS IS THE DEFAULT POST PARAMS USIALLY FOR THE OAUTH 2.0 PROTOCOL
+	  
+	  //default post  
 	$post=array(
     'grant_type' => 'authorization_code',
     'client_id' => $SkycloudClientID,
@@ -99,11 +166,12 @@ function API($url, $post=FALSE, $headers=array()) {
     'redirect_uri' => $baseURL,
     'code' => $_GET['code']
   );
-	
+	}
 
 //URL SWITCHER
 if($url=='token'){
 		 $url=$this->getconfig()->token_url;
+		 
 		}
 	else{
 		  $url=$this->getconfig()->Api_url.$url;
@@ -128,14 +196,12 @@ if($url=='token'){
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
   $response = curl_exec($ch);
-
-	/////here we save the token in side our class so we dont have to outside :)
   if($url=='token'){
-	  $gettoken=json_decode($response, true);
+		////STORE TOKEN INSIDE OUR CLASS so right here
+		  $gettoken=json_decode($response, true);
 	  $_SESSION['access_token'] =$gettoken['access_token'];//store the access token in a session
-  }
-///
-	
+	  //END OF SETTING TOKEN IN A SESSION INSIDE OUR CLASS.
+		}
   return json_decode($response, true);
 }
 ////////////////////////////////////////

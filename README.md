@@ -1,6 +1,6 @@
 <h1>OFFICIAL PHP SDK FOR (sCloud) scloud.live</h1>
 
-A simple Lightweight and Powerful SDK-LIBRARY For The Skycloud API -  by sCloud https://scloud.live
+A simple Lightweight and Powerful SDK-LIBRARY For The sCloud API -  by sCloud https://scloud.live
 
 
 

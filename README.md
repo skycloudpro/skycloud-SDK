@@ -45,6 +45,8 @@ $sCloud->API('METHOD',$params); //- OPTIONAL PARAMETERS ARRAY
 
 <pre><code>$sCloud->AuthToken();//get authentication token info, expiry, creation date</code></pre>
 
+With the above methods it should be quite simple to implement sCloud API's into any system of your choice allowing for an unparalleled secure infrastructure.
+
 Full Documentation can be found here https://developers.scloud.live/Developer/Documentation
 
 

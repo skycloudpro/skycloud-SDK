@@ -47,6 +47,8 @@ $sCloud->API('METHOD',$params); //- OPTIONAL PARAMETERS ARRAY
 
 With the above methods it should be quite simple to implement sCloud API's into any system of your choice allowing for an unparalleled secure infrastructure.
 
+An official Java & Javascript SDK will also be coming in due course.
+
 Full Documentation can be found here https://developers.scloud.live/Developer/Documentation
 
 

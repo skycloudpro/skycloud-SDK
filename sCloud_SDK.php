@@ -1,5 +1,8 @@
 <?php
-
+/**
+sCloud SDK ,uses oauth .02 for authorization and to generate access tokens, then can be used for API calls.
+* refer to https://developers.scloud.live/Developer/Documentation/ for more information.
+*/
 session_start();
 ///error_reporting(E_ALL);
 

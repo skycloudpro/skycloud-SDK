@@ -170,8 +170,17 @@ function API($url, $post=FALSE, $options=FALSE, $headers=array()) {
 
 //URL SWITCHER
 if($url=='token'){
+	 if(isset($_SESSION['access_token'])){
+	 	//a toekn has already been set delrte this current ne first.
+	 	echo 'an access token is already set<br />Token:'.$_SESSION['access_token'].'<br />';
+			}
+			else{
+			//echo 'no previous Token:'.$_SESSION['access_token'].'<br />';
+			
+			
+			
 		 $url=$this->getconfig()->token_url;
-		 
+			}
 		}
 	else{
 		  $url=$this->getconfig()->Api_url.$url;
@@ -196,8 +205,10 @@ if($url=='token'){
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
   $response = curl_exec($ch);
-  if($url=='token'){
+  
+  if($url==$this->getconfig()->token_url){
 		////STORE TOKEN INSIDE OUR CLASS so right here
+		//echo 'poo';
 		  $gettoken=json_decode($response, true);
 	  $_SESSION['access_token'] =$gettoken['access_token'];//store the access token in a session
 	  //END OF SETTING TOKEN IN A SESSION INSIDE OUR CLASS.
@@ -228,9 +239,7 @@ if($url=='token'){
  
  
  
-	//function isAdult() {
-		//return $this->age >= 18?"an Adult":"Not an Adult";
-	//}
+	
  
 }
 ?>

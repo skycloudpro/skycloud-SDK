@@ -6,7 +6,7 @@ $SkycloudClientID = 'YOUR-APP-ID';//PUT YOUR app id HERE client id is the same A
 $SkycloudClientSecret = 'YOU-APP-SECREY-KEY';//PUT YOUR APP SECRET HERE
  
 // This is the URL we'll send the user to first
-// to get their authorization &bauth code
+// to get their authorization & auth code
 $authorizeURL = 'https://scloud.live/oauth2/authorize/';
  
 // This is the endpoint we'll request an access token from

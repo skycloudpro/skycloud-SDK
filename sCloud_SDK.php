@@ -30,7 +30,7 @@ function __construct( $api_key,$app_secret, $age,$request ) {
 	include'Config.php';
 	//other functions will use these config settings via $this->getconfig();
 	//if any varables are added to the config.php then they also need to be declared on the json call below so they can be used.
-	///$makejsonconfog = array('SkycloudClientID'=>$SkycloudClientID, "baseURL"=>$baseURL, "Joe"=>43);
+	///$makejsonconfog = array('SkycloudClientID'=>$SkycloudClientID, "baseURL"=>$baseURL);
 $jsonobj = '{"SkycloudClientID":"'.$SkycloudClientID.'","baseURL":"'.$baseURL.'","authorizeURL":"'.$authorizeURL.'","SkycloudClientSecret":"'.$SkycloudClientSecret.'","Api_url":"'.$apiURLBase.'","token_url":"'.$tokenURL.'"}';
 $obj = json_decode($jsonobj);
     return $obj;//json_encode($makejsonconfog);//$SkycloudClientID;
